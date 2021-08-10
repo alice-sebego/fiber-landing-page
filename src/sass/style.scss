@@ -1,8 +1,68 @@
 @import "./base";
+@import "./placeholder";
 
 *, ::before, ::after{
     box-sizing: border-box;
     padding: 0;
     margin: 0;
     font-family: $font-stack;
+}
+
+header{
+    @extend %padding-sections;
+
+    nav{
+        @extend %flex-row;
+
+        .logo{
+            font-size: 1.2em;
+            font-weight:bold;
+        }
+
+        button{
+            display: none;
+            border: none;
+        }
+    }
+}
+
+#presentation{
+    @extend %padding-sections;
+    @extend %flex-row;
+    flex-wrap: wrap;
+
+    #illustration{
+        img{
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+
+@media screen and (max-width:414px) {
+    header{
+        nav{
+            justify-content: space-between;
+
+            p{
+                display: inline-block;
+            }
+
+            button{
+                display: block;
+                background-color: $white;
+            }
+
+            ul, div{
+                display: none;
+            }
+        }
+    }
+
+    #presentation{
+        #illustration{
+            margin-top: -10vh;
+        }
+    }
+    
 }

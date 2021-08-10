@@ -1,8 +1,45 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+header, #presentation {
+  padding: 4vh 8vw; }
+  @media screen and (max-width: 414px) {
+    header, #presentation {
+      padding: 2vh 4w; } }
+
+header nav, #presentation {
+  display: flex;
+  flex-direction: row; }
+
 *, ::before, ::after {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
   font-family: "Open Sans", sans-serif; }
+
+header nav .logo {
+  font-size: 1.2em;
+  font-weight: bold; }
+header nav button {
+  display: none;
+  border: none; }
+
+#presentation {
+  flex-wrap: wrap; }
+  #presentation #illustration img {
+    width: 100%;
+    height: auto; }
+
+@media screen and (max-width: 414px) {
+  header nav {
+    justify-content: space-between; }
+    header nav p {
+      display: inline-block; }
+    header nav button {
+      display: block;
+      background-color: #fff; }
+    header nav ul, header nav div {
+      display: none; }
+
+  #presentation #illustration {
+    margin-top: -10vh; } }
 
 /*# sourceMappingURL=style.css.map */
