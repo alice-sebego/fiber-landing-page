@@ -31,7 +31,47 @@ header{
     @extend %flex-row;
     flex-wrap: wrap;
 
+    .description{
+        order: 0;
+
+        h1{
+            font-size: 2.2em;
+            font-weight: bold;
+        }
+
+        p{
+            display: block;
+            margin: 3vh 0;
+            color: $grey-dark;
+            line-height: 1.8em;
+            font-weight: 600;
+        }
+
+        a{
+            text-decoration: none;
+            display: inline-block;
+            padding: 2vh 2vw;
+            color: $secondary-color;
+            font-weight: bold;
+            border-radius: .4em;
+            text-decoration: underline 2px solid $secondary-color;
+        }
+        
+        #started{
+            color: $white ;
+            background-color: $secondary-color;
+            text-decoration: none;
+        }
+
+        ul{
+            list-style-image: url("../assets/checkmark.svg");
+            
+        }
+
+    }
+
     #illustration{
+        order: 1;
         img{
             width: 100%;
             height: auto;
@@ -39,7 +79,7 @@ header{
     }
 }
 
-@media screen and (max-width:414px) {
+@media screen and (max-width:700px) {
     header{
         nav{
             justify-content: space-between;
@@ -60,8 +100,30 @@ header{
     }
 
     #presentation{
+
         #illustration{
+            order: 0;
             margin-top: -10vh;
+        }
+
+        .description{
+            order: 1;
+            margin: 2vh 0;
+
+            table{
+                display: none;
+            }
+
+            a{
+               display: block;
+               width: 100%;
+               text-align: center; 
+            }
+
+            ul{
+                display: block;
+                margin-left: 6vw;
+            }
         }
     }
     

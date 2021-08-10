@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 header, #presentation {
   padding: 4vh 8vw; }
-  @media screen and (max-width: 414px) {
+  @media screen and (max-width: 700px) {
     header, #presentation {
       padding: 2vh 4w; } }
 
@@ -24,11 +24,38 @@ header nav button {
 
 #presentation {
   flex-wrap: wrap; }
-  #presentation #illustration img {
-    width: 100%;
-    height: auto; }
+  #presentation .description {
+    order: 0; }
+    #presentation .description h1 {
+      font-size: 2.2em;
+      font-weight: bold; }
+    #presentation .description p {
+      display: block;
+      margin: 3vh 0;
+      color: #4f4f4f;
+      line-height: 1.8em;
+      font-weight: 600; }
+    #presentation .description a {
+      text-decoration: none;
+      display: inline-block;
+      padding: 2vh 2vw;
+      color: #4d13d1;
+      font-weight: bold;
+      border-radius: .4em;
+      text-decoration: underline 2px solid #4d13d1; }
+    #presentation .description #started {
+      color: #fff;
+      background-color: #4d13d1;
+      text-decoration: none; }
+    #presentation .description ul {
+      list-style-image: url("../assets/checkmark.svg"); }
+  #presentation #illustration {
+    order: 1; }
+    #presentation #illustration img {
+      width: 100%;
+      height: auto; }
 
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 700px) {
   header nav {
     justify-content: space-between; }
     header nav p {
@@ -40,6 +67,19 @@ header nav button {
       display: none; }
 
   #presentation #illustration {
-    margin-top: -10vh; } }
+    order: 0;
+    margin-top: -10vh; }
+  #presentation .description {
+    order: 1;
+    margin: 2vh 0; }
+    #presentation .description table {
+      display: none; }
+    #presentation .description a {
+      display: block;
+      width: 100%;
+      text-align: center; }
+    #presentation .description ul {
+      display: block;
+      margin-left: 6vw; } }
 
 /*# sourceMappingURL=style.css.map */
