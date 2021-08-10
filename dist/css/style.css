@@ -1,11 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
-header, #presentation {
+header, #presentation, #advantage {
   padding: 4vh 8vw; }
   @media screen and (max-width: 700px) {
-    header, #presentation {
+    header, #presentation, #advantage {
       padding: 2vh 4w; } }
 
-header nav, #presentation {
+header nav, #presentation, #advantage {
   display: flex;
   flex-direction: row; }
 
@@ -55,6 +55,28 @@ header nav button {
       width: 100%;
       height: auto; }
 
+#advantage {
+  flex-wrap: wrap; }
+  #advantage .description h2 {
+    font-size: xx-large; }
+  #advantage .description #why-fiber {
+    color: #4d13d1;
+    font-weight: bold; }
+  #advantage .description .assurance {
+    margin: 3vh 3vw; }
+    #advantage .description .assurance h3 {
+      font-weight: 900;
+      font-size: 1.1em; }
+    #advantage .description .assurance p {
+      display: block;
+      margin: 2vh 0;
+      color: #4f4f4f;
+      line-height: 1.8em;
+      font-weight: 600; }
+  #advantage #guide-acces img {
+    width: 100%;
+    height: auto; }
+
 @media screen and (max-width: 700px) {
   header nav {
     justify-content: space-between; }
@@ -80,6 +102,12 @@ header nav button {
       text-align: center; }
     #presentation .description ul {
       display: block;
-      margin-left: 6vw; } }
+      margin-left: 6vw; }
+
+  #advantage .description .assurance {
+    margin: 6vh 0; }
+  #advantage #guide-acces img {
+    width: 100%;
+    height: auto; } }
 
 /*# sourceMappingURL=style.css.map */
