@@ -11,7 +11,7 @@
 
 header{
     @extend %padding-sections;
-
+    background: $bg-primary;
     nav{
         @extend %flex-row;
 
@@ -31,6 +31,7 @@ header{
     @extend %padding-sections;
     @extend %flex-row;
     flex-wrap: wrap;
+    background: $bg-primary;
 
     .description{
         order: 0;
@@ -56,7 +57,18 @@ header{
         }
 
         ul{
-            list-style-image: url("../assets/checkmark.svg");
+            list-style-type: none;
+            list-style-position: inside;
+
+            li{
+                display: flex;
+                align-items: center;
+
+                &::before{
+                    content: url("../assets/checkmark.svg");
+                    margin-right: .5em;
+                }
+            }
             
         }
 
@@ -240,7 +252,6 @@ header{
 
             ul{
                 display: block;
-                margin-left: 6vw;
             }
         }
     }

@@ -22,15 +22,18 @@ header nav, #presentation, #advantage, #advantage .slider {
   margin: 0;
   font-family: "Open Sans", sans-serif; }
 
-header nav .logo {
-  font-size: 1.2em;
-  font-weight: bold; }
-header nav button {
-  display: none;
-  border: none; }
+header {
+  background: #fbf8f3; }
+  header nav .logo {
+    font-size: 1.2em;
+    font-weight: bold; }
+  header nav button {
+    display: none;
+    border: none; }
 
 #presentation {
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  background: #fbf8f3; }
   #presentation .description {
     order: 0; }
     #presentation .description h1 {
@@ -49,7 +52,14 @@ header nav button {
       background-color: #4d13d1;
       text-decoration: none; }
     #presentation .description ul {
-      list-style-image: url("../assets/checkmark.svg"); }
+      list-style-type: none;
+      list-style-position: inside; }
+      #presentation .description ul li {
+        display: flex;
+        align-items: center; }
+        #presentation .description ul li::before {
+          content: url("../assets/checkmark.svg");
+          margin-right: .5em; }
   #presentation #illustration {
     order: 1; }
     #presentation #illustration img {
@@ -166,8 +176,7 @@ header nav button {
       width: 100%;
       text-align: center; }
     #presentation .description ul {
-      display: block;
-      margin-left: 6vw; }
+      display: block; }
 
   #advantage .description .assurance {
     margin: 6vh 0; }
