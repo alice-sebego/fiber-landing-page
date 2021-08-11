@@ -181,7 +181,8 @@ header{
                     align-self: start;
                     margin-left: 1em;
                     font-weight: 700;
-                    font-size: 0.95em; 
+                    font-size: 0.9em;
+                    color: $grey-dark; 
                 }
 
                 display: grid;
@@ -301,7 +302,6 @@ footer{
         }
     
         #guide-acces{
-            
             
             img{
                 width: 100%;
