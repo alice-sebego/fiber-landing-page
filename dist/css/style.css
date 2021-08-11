@@ -57,16 +57,20 @@ header {
   flex-wrap: wrap;
   background: #fbf8f3; }
   #presentation .description {
-    order: 0; }
+    width: 49%;
+    order: 0;
+    padding: 8vh 0; }
+    #presentation .description table p {
+      font-weight: 600; }
     #presentation .description h1 {
-      font-size: 2.2em;
+      font-size: 2em;
       font-weight: bold; }
     #presentation .description p {
       display: block;
-      margin: 3vh 0;
+      margin: 1vh 0;
       color: #4f4f4f;
-      line-height: 1.8em;
-      font-weight: 600; }
+      line-height: 1.5em;
+      font-weight: 400; }
     #presentation .description a {
       text-decoration: underline 2px solid #4d13d1; }
     #presentation .description #started {
@@ -75,14 +79,21 @@ header {
       text-decoration: none; }
     #presentation .description ul {
       list-style-type: none;
-      list-style-position: inside; }
+      list-style-position: inside;
+      margin-top: 0.8em;
+      display: inline-flex; }
       #presentation .description ul li {
         display: flex;
-        align-items: center; }
+        align-items: center;
+        font-size: 0.7em;
+        font-weight: 700; }
         #presentation .description ul li::before {
           content: url("../assets/checkmark.svg");
           margin-right: .5em; }
+      #presentation .description ul li:not(:first-child) {
+        margin-left: 1em; }
   #presentation #illustration {
+    width: 51%;
     order: 1; }
     #presentation #illustration img {
       width: 100%;
@@ -104,8 +115,8 @@ header {
       display: block;
       margin: 2vh 0;
       color: #4f4f4f;
-      line-height: 1.8em;
-      font-weight: 600; }
+      line-height: 1.5em;
+      font-weight: 500; }
   #advantage #guide-acces {
     background: #4d13d1;
     padding: 3vh 5vw 0;
@@ -211,11 +222,16 @@ footer {
       display: none; }
 
   #presentation #illustration {
+    width: 100%;
     order: 0;
     margin-top: -10vh; }
   #presentation .description {
+    width: 100%;
     order: 1;
-    margin: 2vh 0; }
+    margin: 2vh 0;
+    padding: 0; }
+    #presentation .description h1 {
+      font-size: 2.2em; }
     #presentation .description table {
       display: none; }
     #presentation .description a {
@@ -223,7 +239,14 @@ footer {
       width: 100%;
       text-align: center; }
     #presentation .description ul {
-      display: block; }
+      display: flex;
+      flex-direction: column; }
+    #presentation .description p {
+      display: block;
+      margin: 3vh 0;
+      color: #4f4f4f;
+      line-height: 1.8em;
+      font-weight: 600; }
 
   #advantage .description .assurance {
     margin: 6vh 0; }
