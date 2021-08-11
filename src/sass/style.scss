@@ -14,11 +14,44 @@ header{
     background: $bg-primary;
     nav{
         @extend %flex-row;
+        justify-content: space-between;
 
         .logo{
             font-size: 1.2em;
             font-weight:bold;
         }
+
+        ul{
+            list-style-type: none;
+            display: flex;
+
+            li{
+                margin: 0 1vw;
+            }
+
+            li > a{
+                text-decoration: none;
+                color: $primary-color;
+                display: inline-block;
+            }
+        }
+
+        div > a{
+            padding: 2vh 2vw;
+            color: $primary-color;
+            font-weight: bold;
+            text-decoration: none;
+            //border-radius: .4em;
+        }
+
+        #signup{
+            padding: 2vh 2vw;
+            color: $white;
+            background: $secondary-color;
+            font-weight: bold;
+            border-radius: .4em; 
+        }
+
 
         button{
             display: none;

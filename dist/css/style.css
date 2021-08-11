@@ -24,12 +24,34 @@ header nav, #presentation, #advantage, #advantage .slider, footer {
 
 header {
   background: #fbf8f3; }
-  header nav .logo {
-    font-size: 1.2em;
-    font-weight: bold; }
-  header nav button {
-    display: none;
-    border: none; }
+  header nav {
+    justify-content: space-between; }
+    header nav .logo {
+      font-size: 1.2em;
+      font-weight: bold; }
+    header nav ul {
+      list-style-type: none;
+      display: flex; }
+      header nav ul li {
+        margin: 0 1vw; }
+      header nav ul li > a {
+        text-decoration: none;
+        color: #000;
+        display: inline-block; }
+    header nav div > a {
+      padding: 2vh 2vw;
+      color: #000;
+      font-weight: bold;
+      text-decoration: none; }
+    header nav #signup {
+      padding: 2vh 2vw;
+      color: #fff;
+      background: #4d13d1;
+      font-weight: bold;
+      border-radius: .4em; }
+    header nav button {
+      display: none;
+      border: none; }
 
 #presentation {
   flex-wrap: wrap;
