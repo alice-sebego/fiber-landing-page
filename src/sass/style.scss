@@ -131,6 +131,70 @@ header{
             display: block;
         }
     }
+
+    .slider{
+        @extend %padding-sections;
+        @extend %flex-row;
+        flex-wrap: wrap;
+
+        aside{
+            margin: 2vh 0;
+            border: 1px solid $grey-light;
+            border-radius: .5em;
+            padding: 3vh 3vw;
+
+            .title{
+
+                img, h3, .income{
+                    display: block;
+                }
+
+                img{ 
+                    grid-area: photo;
+                    align-self: end; 
+                }
+
+                h3{ 
+                    grid-area: title;
+                    align-self: end;
+                    margin-left: 1em;
+                    color: $secondary-color;
+                    font-size: 0.95em;
+                    font-weight: bolder;
+                    letter-spacing: .01em;
+                }
+
+                .income{ 
+                    grid-area: income;
+                    align-self: start;
+                    margin-left: 1em;
+                    font-weight: 700;
+                    font-size: 0.95em; 
+                }
+
+                display: grid;
+                grid-template-columns: 50px 1fr;
+                grid-template-rows: 2fr 1fr;
+                grid-template-areas: 
+                "photo title"
+                "photo income"
+                ;
+            }
+
+            p:not(.income){
+                @include handle-paragraphe(block, 2vh 0, $grey-dark, 1.8em, 600);
+            }
+
+            a{
+              @extend %button-link;
+              text-decoration: none;
+              width: 100%;
+              text-align: center;
+              border: 1px solid $grey-light;
+              border-radius: .3em;  
+            }
+        }
+    }
 }
 
 @media screen and (max-width:700px) {

@@ -1,15 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
-header, #presentation, #advantage {
+header, #presentation, #advantage, #advantage .slider {
   padding: 4vh 8vw; }
   @media screen and (max-width: 700px) {
-    header, #presentation, #advantage {
+    header, #presentation, #advantage, #advantage .slider {
       padding: 2vh 4w; } }
 
-header nav, #presentation, #advantage {
+header nav, #presentation, #advantage, #advantage .slider {
   display: flex;
   flex-direction: row; }
 
-#presentation .description a, #advantage #guide-acces a {
+#presentation .description a, #advantage #guide-acces a, #advantage .slider aside a {
   display: inline-block;
   padding: 2vh 2vw;
   color: #4d13d1;
@@ -98,6 +98,49 @@ header nav button {
       border-radius: .5em;
       margin-bottom: 0;
       display: block; }
+  #advantage .slider {
+    flex-wrap: wrap; }
+    #advantage .slider aside {
+      margin: 2vh 0;
+      border: 1px solid #e5e5e5;
+      border-radius: .5em;
+      padding: 3vh 3vw; }
+      #advantage .slider aside .title {
+        display: grid;
+        grid-template-columns: 50px 1fr;
+        grid-template-rows: 2fr 1fr;
+        grid-template-areas: "photo title" "photo income"; }
+        #advantage .slider aside .title img, #advantage .slider aside .title h3, #advantage .slider aside .title .income {
+          display: block; }
+        #advantage .slider aside .title img {
+          grid-area: photo;
+          align-self: end; }
+        #advantage .slider aside .title h3 {
+          grid-area: title;
+          align-self: end;
+          margin-left: 1em;
+          color: #4d13d1;
+          font-size: 0.95em;
+          font-weight: bolder;
+          letter-spacing: .01em; }
+        #advantage .slider aside .title .income {
+          grid-area: income;
+          align-self: start;
+          margin-left: 1em;
+          font-weight: 700;
+          font-size: 0.95em; }
+      #advantage .slider aside p:not(.income) {
+        display: block;
+        margin: 2vh 0;
+        color: #4f4f4f;
+        line-height: 1.8em;
+        font-weight: 600; }
+      #advantage .slider aside a {
+        text-decoration: none;
+        width: 100%;
+        text-align: center;
+        border: 1px solid #e5e5e5;
+        border-radius: .3em; }
 
 @media screen and (max-width: 700px) {
   header nav {
