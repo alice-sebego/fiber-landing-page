@@ -1,4 +1,5 @@
 @import "./base";
+@import "./mixin";
 @import "./placeholder";
 
 *, ::before, ::after{
@@ -40,20 +41,11 @@ header{
         }
 
         p{
-            display: block;
-            margin: 3vh 0;
-            color: $grey-dark;
-            line-height: 1.8em;
-            font-weight: 600;
+            @include handle-paragraphe(block, 3vh 0, $grey-dark, 1.8em, 600)
         }
 
         a{
-            text-decoration: none;
-            display: inline-block;
-            padding: 2vh 2vw;
-            color: $secondary-color;
-            font-weight: bold;
-            border-radius: .4em;
+            @extend %button-link;
             text-decoration: underline 2px solid $secondary-color;
         }
         
@@ -104,19 +96,39 @@ header{
             }
 
             p{
-                display: block;
-                margin: 2vh 0;
-                color: $grey-dark;
-                line-height: 1.8em;
-                font-weight: 600;
+                @include handle-paragraphe(block, 2vh 0, $grey-dark, 1.8em, 600);
             }
         }
     }
 
     #guide-acces{
+        background: $secondary-color;
+        padding: 3vh 5vw 0;
+        border-radius: .5em;
+
+        h2{
+            color: $white;
+        }
+
+        p{
+            @include handle-paragraphe(block, 2vh 0, $white, 1.8em, 300);
+        }
+
+        a{
+            width: 100%;
+            @extend %button-link;
+            margin: 3vh 0 5vh 0;
+            text-decoration: none;
+            background: $white;
+            text-align: center;
+        }
+
         img{
             width: 100%;
             height: auto;
+            border-radius: .5em;
+            margin-bottom: 0;
+            display: block;
         }
     }
 }
@@ -179,6 +191,8 @@ header{
         }
     
         #guide-acces{
+            
+            
             img{
                 width: 100%;
                 height: auto;

@@ -1,0 +1,7 @@
+@mixin handle-paragraphe($display, $margin, $color, $lineHeight, $fontWeight){
+    display: $display;
+    margin: $margin;
+    color: $color;
+    line-height: $lineHeight;
+    font-weight: $fontWeight;
+}
