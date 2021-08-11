@@ -209,6 +209,41 @@ header{
     }
 }
 
+footer{
+    @extend %padding-sections;
+    @extend %flex-row;
+    flex-wrap: wrap;
+    background: $bg-primary;
+
+    .container-footer{
+        margin: 2vh 0;
+
+        h4{
+            font-weight: bold;
+            font-size: .95em;
+        }
+
+        p{
+            @include handle-paragraphe(block, 2vh 0, $grey-dark, 1.7em, 400);
+        }
+
+        ul{
+            list-style-type: none;
+
+            li{
+                display: block;
+                margin: 2vh 0;
+                font-weight: 500;
+            }
+
+            a{
+                text-decoration: none;
+                color: $grey-dark;
+            }
+        }
+    }
+}
+
 @media screen and (max-width:700px) {
     header{
         nav{
@@ -273,6 +308,10 @@ header{
                 height: auto;
             }
         }
+    }
+
+    footer{
+        flex-direction: column;
     }
     
 }
