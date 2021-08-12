@@ -139,13 +139,29 @@ header{
 
     .description{
 
-        h2{
-            font-size: xx-large;
-        }
-
         #why-fiber{
             color: $secondary-color;
             font-weight: bold;
+            //display: block;
+            grid-area: whyFiber;
+        }
+
+        h2{
+            font-size: xx-large;
+            //display: block;
+            grid-area: title;
+        }
+
+        .assurance:nth-child(1){
+            grid-area: build;
+        }
+
+        .assurance:nth-child(2){
+            grid-area: add;
+        }
+
+        .assurance:nth-child(3){
+            grid-area: responsive;
         }
 
         .assurance{
@@ -160,6 +176,16 @@ header{
                 @include handle-paragraphe(block, 2vh 0, $grey-dark, 1.5em, 500);
             }
         }
+
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "whyFiber whyFiber whyFiber"
+        "title title title"
+        "build add responsive";
+        gap: 5px;
+
     }
 
     #guide-acces{
@@ -346,6 +372,10 @@ footer{
             ul{
                 display: flex;
                 flex-direction: column;
+
+                li:not(:first-child) {
+                    margin-left: 0;
+                }
             }
 
             p{
@@ -361,6 +391,17 @@ footer{
             .assurance{
                 margin: 6vh 0;
             }
+
+            grid-template-columns: 1fr;
+            grid-template-rows: auto;
+            grid-template-areas: 
+            "whyFiber"
+            "title"
+            "build" 
+            "add" 
+            "responsive";
+            gap: 0;
+
         }
     
         #guide-acces{

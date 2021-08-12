@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 header, #presentation, #advantage, #advantage .slider, footer {
-  padding: 4vh 8vw; }
+  padding: 4vh 10vw; }
   @media screen and (max-width: 700px) {
     header, #presentation, #advantage, #advantage .slider, footer {
       padding: 2vh 4w; } }
@@ -101,22 +101,36 @@ header {
 
 #advantage {
   flex-wrap: wrap; }
-  #advantage .description h2 {
-    font-size: xx-large; }
-  #advantage .description #why-fiber {
-    color: #4d13d1;
-    font-weight: bold; }
-  #advantage .description .assurance {
-    margin: 3vh 3vw; }
-    #advantage .description .assurance h3 {
-      font-weight: 900;
-      font-size: 1.1em; }
-    #advantage .description .assurance p {
-      display: block;
-      margin: 2vh 0;
-      color: #4f4f4f;
-      line-height: 1.5em;
-      font-weight: 500; }
+  #advantage .description {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "whyFiber whyFiber whyFiber" "title title title" "build add responsive";
+    gap: 5px; }
+    #advantage .description #why-fiber {
+      color: #4d13d1;
+      font-weight: bold;
+      grid-area: whyFiber; }
+    #advantage .description h2 {
+      font-size: xx-large;
+      grid-area: title; }
+    #advantage .description .assurance:nth-child(1) {
+      grid-area: build; }
+    #advantage .description .assurance:nth-child(2) {
+      grid-area: add; }
+    #advantage .description .assurance:nth-child(3) {
+      grid-area: responsive; }
+    #advantage .description .assurance {
+      margin: 3vh 3vw; }
+      #advantage .description .assurance h3 {
+        font-weight: 900;
+        font-size: 1.1em; }
+      #advantage .description .assurance p {
+        display: block;
+        margin: 2vh 0;
+        color: #4f4f4f;
+        line-height: 1.5em;
+        font-weight: 500; }
   #advantage #guide-acces {
     background: #4d13d1;
     padding: 3vh 5vw 0;
@@ -241,6 +255,8 @@ footer {
     #presentation .description ul {
       display: flex;
       flex-direction: column; }
+      #presentation .description ul li:not(:first-child) {
+        margin-left: 0; }
     #presentation .description p {
       display: block;
       margin: 3vh 0;
@@ -248,8 +264,13 @@ footer {
       line-height: 1.8em;
       font-weight: 600; }
 
-  #advantage .description .assurance {
-    margin: 6vh 0; }
+  #advantage .description {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "whyFiber" "title" "build" "add"  "responsive";
+    gap: 0; }
+    #advantage .description .assurance {
+      margin: 6vh 0; }
   #advantage #guide-acces img {
     width: 100%;
     height: auto; }
