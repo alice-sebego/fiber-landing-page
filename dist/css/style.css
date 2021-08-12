@@ -134,27 +134,38 @@ header {
   #advantage #guide-acces {
     background: #4d13d1;
     padding: 3vh 5vw 0;
-    border-radius: .5em; }
+    border-radius: .5em;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: "title img" "text img" "button img";
+    column-gap: 15px;
+    row-gap: 2px; }
     #advantage #guide-acces h2 {
-      color: #fff; }
+      color: #fff;
+      grid-area: title; }
     #advantage #guide-acces p {
+      grid-area: text;
       display: block;
       margin: 2vh 0;
       color: #fff;
       line-height: 1.8em;
       font-weight: 300; }
     #advantage #guide-acces a {
-      width: 100%;
+      grid-area: button;
+      width: 70%;
       margin: 3vh 0 5vh 0;
       text-decoration: none;
       background: #fff;
       text-align: center; }
     #advantage #guide-acces img {
+      grid-area: img;
       width: 100%;
       height: auto;
       border-radius: .5em;
       margin-bottom: 0;
-      display: block; }
+      display: block;
+      align-self: end; }
   #advantage .slider {
     flex-wrap: wrap; }
     #advantage .slider aside {
@@ -271,9 +282,17 @@ footer {
     gap: 0; }
     #advantage .description .assurance {
       margin: 6vh 0; }
-  #advantage #guide-acces img {
-    width: 100%;
-    height: auto; }
+  #advantage #guide-acces {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "title" "text" "button" "img";
+    column-gap: 0px;
+    row-gap: 15px; }
+    #advantage #guide-acces a {
+      width: 100%; }
+    #advantage #guide-acces img {
+      width: 100%;
+      height: auto; }
 
   footer {
     flex-direction: column; } }
