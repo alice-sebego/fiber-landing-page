@@ -246,6 +246,7 @@ header{
             opacity: 0;
             transition: opacity 0.1s ease-out;
             width: 45%;
+            min-height: 320px;
             margin: 2vh 0;
             border: 1px solid $grey-light;
             border-radius: .5em;
@@ -473,9 +474,22 @@ footer{
             }
         }
 
-        .cmd-slider{
-            display: none;
+        .slider{
+
+            aside{
+                max-height: 320px;
+            }
+            aside.active {
+                width: 65%;
+                max-height: 720px;
+                transform: translateX(25%);
+            }
         }
+
+        .cmd-slider{
+            transform: translateY(-500%);
+        }
+
     }
 
     footer{

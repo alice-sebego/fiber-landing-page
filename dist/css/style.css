@@ -174,6 +174,7 @@ header {
       opacity: 0;
       transition: opacity 0.1s ease-out;
       width: 45%;
+      min-height: 320px;
       margin: 2vh 0;
       border: 1px solid #e5e5e5;
       border-radius: .5em;
@@ -317,8 +318,14 @@ footer {
     #advantage #guide-acces img {
       width: 100%;
       height: auto; }
+  #advantage .slider aside {
+    max-height: 320px; }
+  #advantage .slider aside.active {
+    width: 65%;
+    max-height: 720px;
+    transform: translateX(25%); }
   #advantage .cmd-slider {
-    display: none; }
+    transform: translateY(-500%); }
 
   footer {
     flex-direction: column; } }
