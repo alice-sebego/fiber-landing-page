@@ -340,7 +340,8 @@ footer{
     background: $bg-primary;
 
     .container-footer{
-        margin: 2vh 2vw;
+        margin: 2vh 1vw;
+        max-width: 210px;
 
         h4{
             font-weight: bold;
@@ -498,6 +499,7 @@ footer{
         .container-footer{
             margin: 2vh 0;
         }
+
     }
     
 }
