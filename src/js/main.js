@@ -39,7 +39,7 @@ const previousSlide = () => {
     
 }
 
-let intervalId = setInterval(nextSlide, 4000);
+let intervalId = setInterval(nextSlide, 9000);
 
 $next.addEventListener("click", () => {
     clearInterval(intervalId);

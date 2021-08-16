@@ -237,10 +237,10 @@ header {
       border: none; }
 
 footer {
-  flex-wrap: wrap;
+  justify-content: space-evenly;
   background: #fbf8f3; }
   footer .container-footer {
-    margin: 2vh 0; }
+    margin: 2vh 2vw; }
     footer .container-footer h4 {
       font-weight: bold;
       font-size: .95em; }
@@ -328,6 +328,8 @@ footer {
     transform: translateY(-500%); }
 
   footer {
-    flex-direction: column; } }
+    flex-direction: column; }
+    footer .container-footer {
+      margin: 2vh 0; } }
 
 /*# sourceMappingURL=style.css.map */

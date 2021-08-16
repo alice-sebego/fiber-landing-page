@@ -336,11 +336,11 @@ header{
 footer{
     @extend %padding-sections;
     @extend %flex-row;
-    flex-wrap: wrap;
+    justify-content: space-evenly;
     background: $bg-primary;
 
     .container-footer{
-        margin: 2vh 0;
+        margin: 2vh 2vw;
 
         h4{
             font-weight: bold;
@@ -494,6 +494,10 @@ footer{
 
     footer{
         flex-direction: column;
+
+        .container-footer{
+            margin: 2vh 0;
+        }
     }
     
 }
