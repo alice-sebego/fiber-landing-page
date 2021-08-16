@@ -190,7 +190,7 @@ header{
 
     #guide-acces{
         background: $secondary-color;
-        padding: 3vh 5vw 0;
+        padding: 8vh 5vw 0;
         border-radius: .5em;
         display: grid;
 
@@ -235,11 +235,17 @@ header{
     }
 
     .slider{
-        @extend %padding-sections;
-        @extend %flex-row;
-        flex-wrap: wrap;
+        //@extend %padding-sections;
+        padding: 4vh 0;
+        //@extend %flex-row;
+        //flex-wrap: wrap;
+        display: flex;
+        position: relative;
 
         aside{
+            opacity: 0;
+            transition: opacity 0.1s ease-out;
+            width: 45%;
             margin: 2vh 0;
             border: 1px solid $grey-light;
             border-radius: .5em;
@@ -296,6 +302,32 @@ header{
               border: 1px solid $grey-light;
               border-radius: .3em;  
             }
+        }
+
+        aside.active {
+            opacity: 1;
+            transition: opacity .2s ease-in-out;
+            width: 55%;
+            max-height: 320px;
+            position: absolute;
+            transform: translateX(45%);
+        }
+    }
+
+    .cmd-slider{
+
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        transform: translateY(-700%);
+        position: relative;
+
+        button{
+            width: 35px;
+            height: 35px;
+            padding: 8px;
+            border-radius: 50%;
+            border: none;
         }
     }
 }
@@ -439,6 +471,10 @@ footer{
                 width: 100%;
                 height: auto;
             }
+        }
+
+        .cmd-slider{
+            display: none;
         }
     }
 

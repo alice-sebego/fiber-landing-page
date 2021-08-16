@@ -1,11 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
-header, #presentation, #advantage, #advantage .slider, footer {
+header, #presentation, #advantage, footer {
   padding: 4vh 10vw; }
   @media screen and (max-width: 700px) {
-    header, #presentation, #advantage, #advantage .slider, footer {
+    header, #presentation, #advantage, footer {
       padding: 2vh 4w; } }
 
-header nav, #presentation, #advantage, #advantage .slider, footer {
+header nav, #presentation, #advantage, footer {
   display: flex;
   flex-direction: row; }
 
@@ -133,7 +133,7 @@ header {
         font-weight: 500; }
   #advantage #guide-acces {
     background: #4d13d1;
-    padding: 3vh 5vw 0;
+    padding: 8vh 5vw 0;
     border-radius: .5em;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -167,8 +167,13 @@ header {
       display: block;
       align-self: end; }
   #advantage .slider {
-    flex-wrap: wrap; }
+    padding: 4vh 0;
+    display: flex;
+    position: relative; }
     #advantage .slider aside {
+      opacity: 0;
+      transition: opacity 0.1s ease-out;
+      width: 45%;
       margin: 2vh 0;
       border: 1px solid #e5e5e5;
       border-radius: .5em;
@@ -210,6 +215,25 @@ header {
         text-align: center;
         border: 1px solid #e5e5e5;
         border-radius: .3em; }
+    #advantage .slider aside.active {
+      opacity: 1;
+      transition: opacity .2s ease-in-out;
+      width: 55%;
+      max-height: 320px;
+      position: absolute;
+      transform: translateX(45%); }
+  #advantage .cmd-slider {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-700%);
+    position: relative; }
+    #advantage .cmd-slider button {
+      width: 35px;
+      height: 35px;
+      padding: 8px;
+      border-radius: 50%;
+      border: none; }
 
 footer {
   flex-wrap: wrap;
@@ -293,6 +317,8 @@ footer {
     #advantage #guide-acces img {
       width: 100%;
       height: auto; }
+  #advantage .cmd-slider {
+    display: none; }
 
   footer {
     flex-direction: column; } }
