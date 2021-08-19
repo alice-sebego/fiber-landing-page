@@ -1,0 +1,24 @@
+@import "./base";
+@import "./mixin";
+@import "./placeholder";
+
+*, ::before, ::after{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: $font-stack;
+}
+
+header{
+    @extend %padding-sections;
+
+    .logo{
+        font-size: 1.2em;
+        font-weight:bold;
+    }
+
+}
+
+#sign-up{
+    @extend %padding-sections;
+}

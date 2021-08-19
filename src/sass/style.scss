@@ -142,13 +142,11 @@ header{
         #why-fiber{
             color: $secondary-color;
             font-weight: bold;
-            //display: block;
             grid-area: whyFiber;
         }
 
         h2{
             font-size: xx-large;
-            //display: block;
             grid-area: title;
         }
 
@@ -235,10 +233,7 @@ header{
     }
 
     .slider{
-        //@extend %padding-sections;
         padding: 4vh 0;
-        //@extend %flex-row;
-        //flex-wrap: wrap;
         display: flex;
         position: relative;
 
