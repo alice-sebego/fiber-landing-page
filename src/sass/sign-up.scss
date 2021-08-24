@@ -52,7 +52,24 @@ header{
             border: 1px solid $grey-medium;
             border-radius: .3em;
         }
+
+        span{
+            padding: 2px;
+            align-self: flex-end;
+            margin: -6vh 1vh 0;
+            color: $grey-medium;
+            cursor: pointer;
+        }
+
+        .warning{
+            color: $grey-dark;
+            background: rgba($color: $orange-color, $alpha: 0.3);
+        }
+
+        
     }
+
+
 
     fieldset:nth-child(4){
         display: flex;
